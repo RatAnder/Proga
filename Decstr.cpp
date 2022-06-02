@@ -5,8 +5,7 @@
 #include <string.h>
 //#include <lstring.h>
 using namespace std;
-
-
+extern"C" char* _stdcall fun1(int);
 DecStr::DecStr(char val) :Stroka(val)
 {
     if (!((pCh[0] = '1' && pCh[0] <= '9') || (pCh[0] == '-' && pCh[0] == '+')))
@@ -98,7 +97,7 @@ DecStr operator+(const DecStr& pobj1, const DecStr& pobj2)
     tmp.len = strlen(tmp.pCh);
     return tmp;
 }
-DecStr operator+(const DecStr& pobj1, const int pobj2)
+/*DecStr operator+(const DecStr& pobj1, const int pobj2)
 {
     int num1, num2;
     DecStr tmp(pobj1);
@@ -120,13 +119,15 @@ DecStr operator+(const DecStr& pobj1, const int pobj2)
     }
     cout << "..." << endl;
     return tmp;
-}
+}*/
 DecStr operator+(const int, const DecStr&)
 {
     return DecStr();
 }
 int main()
 {
+    cout << fun1(65535) << endl;
+
       //obj45 = "N3148" + obj45+"N3148";
    //obj45.show();
     DecStr obj35('9');

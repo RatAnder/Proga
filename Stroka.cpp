@@ -5,7 +5,7 @@
 //#include <lstring.h>
 using namespace std;
 
-
+extern"C" char* _stdcall fun1(int);
 Stroka::Stroka(int val) :len(val), pCh(new char[len + 1])
 {
     if (val == 0)
@@ -63,6 +63,7 @@ void Stroka::show(void)
 
 int main()
 {
+    cout << fun1(65535) << endl;
     Stroka obj("FBIT");
     Stroka obj1 = obj;
     obj1.show();

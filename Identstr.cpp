@@ -6,7 +6,7 @@
 //#include <lstring.h>
 using namespace std;
 
-
+extern"C" char* _stdcall fun1(int);
 IdentStr::IdentStr(int val) :Stroka(val)
 {
     cout << "IdentStr::IdentStr(int val):Stroka(val)" << endl;
@@ -154,6 +154,7 @@ IdentStr operator + (const char* pobj1, const IdentStr& pobj2)
 }
 int main()
 {
+    cout << fun1(65535) << endl;
     cout << "obj1.Getstr()" << endl;
     IdentStr obj5("_ITMO");
     IdentStr obj6 = obj5;
