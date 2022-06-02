@@ -124,22 +124,3 @@ DecStr operator+(const int, const DecStr&)
 {
     return DecStr();
 }
-int main()
-{
-    cout << fun1(65535) << endl;
-
-      //obj45 = "N3148" + obj45+"N3148";
-   //obj45.show();
-    DecStr obj35('9');
-    obj35.show();
-    DecStr obj36('+');
-    // DecStr obj33("05535");
-    DecStr obj51("+65535");
-    DecStr obj52("1024");
-    obj51 = obj52 = "255";
-    obj51.show();
-    DecStr obj61("65535");
-    DecStr obj62("65535");
-    obj61 = obj61 + obj62;
-    obj61.show();
-};

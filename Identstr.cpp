@@ -152,28 +152,3 @@ IdentStr operator + (const char* pobj1, const IdentStr& pobj2)
     cout << "..." << endl;
     return tmp;
 }
-int main()
-{
-    cout << fun1(65535) << endl;
-    cout << "obj1.Getstr()" << endl;
-    IdentStr obj5("_ITMO");
-    IdentStr obj6 = obj5;
-    IdentStr obj7 = "N3148";
-    obj7.show();
-    obj7 = "ITMO";
-    obj7.show();
-    IdentStr obj8("N3145");
-    obj8 = obj7 = "FBIT";
-    obj8.show();
-    obj8[3] = 'X';
-    cout << obj8[3] << endl;
-    IdentStr obj10 = ~obj8;
-    obj10.show();
-    IdentStr obj20("N3148");
-    IdentStr obj21("FBIT");
-    obj20 = obj20 + obj21;
-    obj20.show();
-    IdentStr obj23("N3148");
-    obj23 = obj23 + "FBIT";
-    obj23.show();
-};

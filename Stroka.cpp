@@ -60,12 +60,3 @@ void Stroka::show(void)
     cout << "pCh =" << pCh << endl;
     cout << "len =" << len << endl;
 }
-
-int main()
-{
-    cout << fun1(65535) << endl;
-    Stroka obj("FBIT");
-    Stroka obj1 = obj;
-    obj1.show();
-    cout << "obj1.Getstr()" << endl;
-};
